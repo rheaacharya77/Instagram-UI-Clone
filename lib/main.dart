@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './homeScreen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -21,8 +23,8 @@ class MyInsta extends StatefulWidget {
 class _MyInstaState extends State<MyInsta> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('Home'),
+  static List<Widget> _widgetOptions = <Widget>[
+    HomeScreen(),
     Text('Search'),
     Text('Post'),
     Text('Activity'),
@@ -44,9 +46,9 @@ class _MyInstaState extends State<MyInsta> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Image.asset('images/camera.png', height: 35),
+                Row(
+                  children: [
+                   Image.asset('images/camera.png', height: 35),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0, top: 8.0),
                     child: Image.asset(
@@ -54,10 +56,10 @@ class _MyInstaState extends State<MyInsta> {
                       fit: BoxFit.cover,
                       height: 40,
                     ),
-                  )
-                ],
-              ),
-              Image.asset('images/message.png', height: 35),
+                  ),
+                  ],
+                ),
+               Image.asset('images/message.png', height: 35),
             ],
           ),
         ),
