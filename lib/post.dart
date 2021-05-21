@@ -48,7 +48,7 @@ class Post extends StatelessWidget {
             )
           ],
         ),
-        Image.asset('images/instagrammer' + numOfUser.toString() + '_post.png'),
+        Image.asset('images/instagrammer' + '$numOfUser' +'_post.png'),
       ],
     );
   }
