@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './homeScreen.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -46,9 +47,9 @@ class _MyInstaState extends State<MyInsta> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-                Row(
-                  children: [
-                   Image.asset('images/camera.png', height: 35),
+              Row(
+                children: [
+                  Image.asset('images/camera.png', height: 35),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0, top: 8.0),
                     child: Image.asset(
@@ -57,9 +58,9 @@ class _MyInstaState extends State<MyInsta> {
                       height: 40,
                     ),
                   ),
-                  ],
-                ),
-               Image.asset('images/message.png', height: 35),
+                ],
+              ),
+              Image.asset('images/message.png', height: 35),
             ],
           ),
         ),
