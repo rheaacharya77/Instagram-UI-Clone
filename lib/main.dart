@@ -21,13 +21,19 @@ class MyInsta extends StatefulWidget {
 class _MyInstaState extends State<MyInsta> {
   int _selectedIndex = 0;
 
-  final List<Widget> _widgetOptions = <Widget>[
-    Text('a'),
-    Text('b'),
-    Text('c'),
-    Text('d'),
-    Text('e')
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text('Home'),
+    Text('Search'),
+    Text('Post'),
+    Text('Activity'),
+    Text('Profile'),
   ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +60,75 @@ class _MyInstaState extends State<MyInsta> {
               Image.asset('images/message.png', height: 35),
             ],
           ),
-          
+        ),
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('images/home.png'),
+              ),
+              activeIcon: ImageIcon(
+                AssetImage('images/home_active.png'),
+              ),
+              title: Text('Home'),
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('images/search.png'),
+              ),
+              activeIcon: ImageIcon(
+                AssetImage('images/search_active.png'),
+              ),
+              title: Text('Search'),
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('images/post.png'),
+              ),
+              activeIcon: ImageIcon(
+                AssetImage('images/post_active.png'),
+              ),
+              title: Text('Post'),
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('images/heart.png'),
+              ),
+              activeIcon: ImageIcon(
+                AssetImage('images/heart_active.png'),
+              ),
+              title: Text('Activity'),
+            ),
+            BottomNavigationBarItem(
+              icon: CircleAvatar(
+                radius: 15,
+                backgroundImage: AssetImage('images/riya.jpg'),
+              ),
+              activeIcon: CircleAvatar(
+                radius: 18,
+                backgroundColor: Colors.black,
+                child: CircleAvatar(
+                  radius: 17,
+                  backgroundColor: Colors.white,
+                  child: CircleAvatar(
+                    radius: 15,
+                    backgroundImage: AssetImage('images/riya.jpg'),
+                  ),
+                ),
+              ),
+              title: Text('Profile'),
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.black87,
+          unselectedItemColor: Colors.black87,
+          iconSize: 30,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          onTap: _onItemTapped,
         ),
       ),
     );
