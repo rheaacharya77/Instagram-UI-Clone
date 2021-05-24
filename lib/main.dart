@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import './homeScreen.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -28,7 +27,7 @@ class _MyInstaState extends State<MyInsta> {
     HomeScreen(),
     Text('Search'),
     Text('Post'),
-    Text('Activity'),
+    Text('Shop'),
     Text('Profile'),
   ];
 
@@ -47,49 +46,46 @@ class _MyInstaState extends State<MyInsta> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Image.asset(
+                  'images/title.png',
+                  fit: BoxFit.cover,
+                  height: 40,
+                ),
+              ),
               Row(
                 children: [
-                  Image.asset('images/camera.png', height: 35),
+                  Image.asset('images/heart.png', height: 40),
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0, top: 8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: Image.asset(
-                      'images/title.png',
-                      fit: BoxFit.cover,
-                      height: 40,
+                      'images/dm.png',
+                      height: 32,
+                      
                     ),
                   ),
                 ],
               ),
-              Image.asset('images/message.png', height: 35),
             ],
           ),
         ),
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
+        body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('images/home.png'),
-              ),
-              activeIcon: ImageIcon(
-                AssetImage('images/home_active.png'),
-              ),
+              icon: Icon(Icons.home_outlined),
+              activeIcon: Icon(Icons.home_filled),
               title: Text('Home'),
             ),
             BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('images/search.png'),
-              ),
-              activeIcon: ImageIcon(
-                AssetImage('images/search_active.png'),
-              ),
+              icon: Icon(Icons.search_outlined),
+              activeIcon: Icon(Icons.search_outlined),
               title: Text('Search'),
             ),
             BottomNavigationBarItem(
               icon: ImageIcon(
-                AssetImage('images/post.png'),
+                AssetImage('images/post_active.png'),
               ),
               activeIcon: ImageIcon(
                 AssetImage('images/post_active.png'),
@@ -97,13 +93,9 @@ class _MyInstaState extends State<MyInsta> {
               title: Text('Post'),
             ),
             BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage('images/heart.png'),
-              ),
-              activeIcon: ImageIcon(
-                AssetImage('images/heart_active.png'),
-              ),
-              title: Text('Activity'),
+              icon: Icon(Icons.shopping_bag_outlined),
+              activeIcon: Icon(Icons.shopping_bag),
+              title: Text('Shop'),
             ),
             BottomNavigationBarItem(
               icon: CircleAvatar(

@@ -46,10 +46,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 //instagrammer1
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 10.0,
-                    left: 8.0,
-                  ),
+                  padding: const EdgeInsets.only(top: 10.0, left: 8.0),
                   child: Column(
                     children: [
                       CircleAvatar(
@@ -67,11 +64,9 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 4.0,
-                        ),
+                        padding: const EdgeInsets.only(top: 4.0),
                         child: Container(
-                          width: 100,
+                          width: 100.0,
                           child: Center(
                             child: Text(
                               'mariaballik',
@@ -83,14 +78,9 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 //instagrammer2
-
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 10.0,
-                    left: 8.0,
-                  ),
+                  padding: const EdgeInsets.only(top: 10.0, left: 8.0),
                   child: Column(
                     children: [
                       CircleAvatar(
@@ -125,7 +115,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 //instagrammer3
-
                 Padding(
                   padding: const EdgeInsets.only(
                     top: 10.0,
@@ -270,7 +259,7 @@ class HomeScreen extends StatelessWidget {
           ),
           Divider(),
           Column(
-            children: <Widget>[
+            children: [
               Post(
                 hasStory: true,
                 numOfUser: 1,
@@ -290,7 +279,7 @@ class HomeScreen extends StatelessWidget {
                 location: 'Bergen, Norway',
               ),
             ],
-          )
+          ),
         ],
       ),
     );
