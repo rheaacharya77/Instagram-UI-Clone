@@ -46,24 +46,27 @@ class _MyInstaState extends State<MyInsta> {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: Image.asset(
-                  'images/title.png',
-                  fit: BoxFit.cover,
-                  height: 40,
-                ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Image.asset(
+                      'images/title.png',
+                      fit: BoxFit.cover,
+                      height: 40,
+                    ),
+                  ),
+                ],
               ),
               Row(
                 children: [
-                  Image.asset('images/heart.png', height: 40),
                   Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Image.asset(
-                      'images/dm.png',
-                      height: 32,
-                      
-                    ),
+                    padding: const EdgeInsets.only(right: 16.0),
+                    child: Image.asset('images/heart.png', height: 35),
+                  ),
+                  Image.asset(
+                    'images/dm.png',
+                    height: 32,
                   ),
                 ],
               ),
@@ -74,15 +77,22 @@ class _MyInstaState extends State<MyInsta> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              activeIcon: Icon(Icons.home_filled),
+              icon: ImageIcon(
+                AssetImage('images/home.png'),
+              ),
+              activeIcon: ImageIcon(
+                AssetImage('images/home_active.png'),
+              ),
               title: Text('Home'),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search_outlined),
-              activeIcon: Icon(Icons.search_outlined),
-              title: Text('Search'),
-            ),
+                icon: ImageIcon(
+                  AssetImage('images/search_active.png'),
+                ),
+                activeIcon: ImageIcon(
+                  AssetImage('images/search_active.png'),
+                ),
+                title: Text('Search')),
             BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage('images/post_active.png'),
