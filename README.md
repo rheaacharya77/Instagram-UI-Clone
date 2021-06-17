@@ -1,3 +1,7 @@
 ## Screenshots
-<img src="screenshots/screenshot1.jpg" height="480px"><img src="screenshots/screenshot2.jpg" height="480px" >
-<img src="screenshots/screenshot3.jpg" height="480px" ><img src="screenshots/screenshot4.jpg" height="480px" >
+<p align="center">
+<img src="screenshots/screenshot1.jpg" width="45%">
+<img src="screenshots/screenshot2.jpg" width="45%" >
+<img src="screenshots/screenshot3.jpg" width="45%" >
+<img src="screenshots/screenshot4.jpg" width="45%" >
+</p>
